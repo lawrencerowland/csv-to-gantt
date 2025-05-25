@@ -8,14 +8,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.0/frappe-gantt.css" />
 </head>
 <body>
-  <h1>CSV‑to‑Gantt</h1>
+  <h1>CSV‑to‑Gantt <span id="themeToggle">🌓</span></h1>
+
+  <!-- Paywall overlay -->
+  <div id="paywall" class="hidden">
+    <p>Download unlimited charts for just <strong>£0.99</strong></p>
+    <button id="payButton">Pay with Stripe</button>
+  </div>
+
   <input type="file" id="csvFile" accept=".csv">
   <button id="downloadBtn" disabled>Download PNG</button>
   <div id="gantt"></div>
 
+  <script src="https://js.stripe.com/v3/"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.3.2/papaparse.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.0/frappe-gantt.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="stripe.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
