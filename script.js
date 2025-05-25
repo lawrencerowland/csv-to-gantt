@@ -41,3 +41,16 @@ downloadBtn.addEventListener('click', () => {
     link.click();
   });
 });
+
+// Render a sample Gantt on page load so the site isn’t blank
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sampleTasks = [
+    {id:1,name:'Planning',start:'2025-06-01',end:'2025-06-03',progress:0,dependencies:''},
+    {id:2,name:'Design',start:'2025-06-04',end:'2025-06-07',progress:0,dependencies:'1'},
+    {id:3,name:'Development',start:'2025-06-08',end:'2025-06-20',progress:0,dependencies:'2'},
+    {id:4,name:'Testing',start:'2025-06-21',end:'2025-06-25',progress:0,dependencies:'3'},
+    {id:5,name:'Deployment',start:'2025-06-26',end:'2025-06-27',progress:0,dependencies:'4'}
+  ];
+  renderGantt(sampleTasks);
+});
